@@ -59,9 +59,11 @@ $(document).ready(function () {
   function changeBg() {
 
     // USE THE UNSPLASHURL VARIABLE TO CREATE AN AJAX "GET" REQUEST
-
+  $.ajax({url: unsplashUrl, method: 'GET'})
+   .done(function(response) {
+      console.log(response);
+   })
     // INSIDE .DONE() FUNCTION
-
       // 1) CONSOLE.LOG() RESPONSE TO MAKE SURE YOU KNOW WHERE THE IMAGE URL YOU NEED IS
 
       // 2) SELECT .HEADING CLASS FROM DOM AND CHAIN THE FOLLOWING METHODS ONTO IT:
