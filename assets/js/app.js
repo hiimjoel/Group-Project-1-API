@@ -29,22 +29,34 @@ $(document).ready(function () {
       // Check if tweet at [i] is in English (check results for .lang). If it's in English, do the following
 
       // Using jQuery, create a new Div. Assign that div the classes "card" and "tweet"
-
+      $("<div/>",{
+          "class": "card" "tweet",
+      });
       // Create another div and add class "card-body"
-
+      $("<div/>",{
+          "class": "card-body",
+      });
       // Create a <h4>, add class "card-title" to it. Then add the user's name to it with .text() (find user's name in returned tweet object)
       // Append card title <h4> to the div with "card-body" you created prior
-
+      $("<h4/>",{
+          "class": "card-title",
+      });
       // Create a <h6>, add classes "card-subtitle" "mb-2" "text-muted" to it. Then add tweet's created_at time (you'll need to parse the time out through Moment first) using .text()
       // HINT: pass created_at time through moment().format("dddd, MMMM Do YYYY, h:mm:ss a") to get proper time format
       // Append card subtitle <h6> to the div with "card-body" you created prior
-
+      $("<h6/>",{
+          "class": "card-subtitle" "mb-2" "text-muted",
+      })
       // Create a <p>, add class "card-text" to it. Then add tweet's "text" to it using .text()
       // Append it to "card-body" div
-
+      $("<p/>",{
+          "class": "card-text",
+      });
       // Create a <button>, add classes "btn" "btn-block" "btn-ouline-dark" "analyze" to it. Then add .text() to it saying something like "Tonalyze It!"
       // Append button to "card-body" div
-
+      $("<button/>",{
+          "class": "btn" "btn-block" "btn-ouline-dark" "analyze",
+      });
       // Append "card-body" to div you created first (the one with "card tweet" as classes)
 
       // Append that first div to #tweets in DOM
@@ -59,10 +71,13 @@ $(document).ready(function () {
   function changeBg() {
 
     // USE THE UNSPLASHURL VARIABLE TO CREATE AN AJAX "GET" REQUEST
-  $.ajax({url: unsplashUrl, method: 'GET'})
-   .done(function(response) {
+  $.ajax({
+      url: unsplashUrl,
+      method: "GET"
+    })
+    .done(function(response) {
       console.log(response);
-   })
+    }
     // INSIDE .DONE() FUNCTION
       // 1) CONSOLE.LOG() RESPONSE TO MAKE SURE YOU KNOW WHERE THE IMAGE URL YOU NEED IS
 
